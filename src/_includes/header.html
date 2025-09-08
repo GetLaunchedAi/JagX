@@ -38,14 +38,14 @@
                         {{ entry.title }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="/armed-security/">Armed Security</a></li>
-                        <li><a href="/private-investigations/">Private Investigations</a></li>
-                        <li><a href="/background-investigations/">Background Investigations</a></li>
-                        <li><a href="/asset-checks/">Asset Checks</a></li>
+                        <li><a class="service-link" href="/armed-security/">Armed Security</a></li>
+                        <li><a class="service-link" href="/private-investigations/">Private Investigations</a></li>
+                        <li><a class="service-link" href="/background-investigations/">Background Investigations</a></li>
+                        <li><a class="service-link" href="/asset-checks/">Asset Checks</a></li>
                     </ul>
 
                     {% else %}
-                    <a {% if entry.url==page.url %} class="active" {% endif %} href="{{ entry.url }}">
+                    <a {% if entry.url==page.url %} class="custom-active" {% endif %} href="{{ entry.url }}">
                         {{ entry.title }}
                     </a>
                     {% endif %}
