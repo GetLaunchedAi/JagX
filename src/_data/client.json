@@ -1,15 +1,15 @@
 {
-  "name": "Junk Force Michigan",
-  "email": "mike@junkforcemichigan.com",
-  "phone": "313-444-9540",
-  "phoneFormatted": "(313) 444-9540",
+  "name": "JagX Security & Investigations",
+  "email": "jagxinc@yahoo.com",
+  "phone": "3134776666",
+  "phoneFormatted": "(313) 477-6666",
   "address": {
-    "lineOne": "Berkley, MI, United States",
+    "lineOne": "26200 Ford Rd Suite 562",
     "lineTwo": "",
-    "city": "Berkley",
-    "county": "Oakland County",
-    "postcode": "",
-    "mapLink": "https://maps.app.goo.gl/f6bDJewmQSinmjRVA"
+    "city": "Dearborn Heights",
+    "county": "Wayne County",
+    "postcode": "48127",
+    "mapLink": "https://maps.app.goo.gl/qzP3h8sTaMi8EutUA"
   },
-  "domain": "https://junkforcemichigan.com/"
+  "domain": "https://www.jagxsecurity.com/"
 }
