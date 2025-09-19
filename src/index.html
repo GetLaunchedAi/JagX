@@ -16,44 +16,38 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="hero">
-  <video autoplay muted loop playsinline class="cs-picture">
-    <source
-      src="/images/hero_vid.mov"
-      type="video/mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-    />
-    Your browser does not support the video tag.
-  </video>
+  <!-- Slideshow replaces the video -->
+  <div class="cs-slideshow cs-picture" aria-label="JagX hero slideshow">
+    <img src="/images/hero/jagxslide1.jpeg" alt="" class="slide is-active" />
+    <img src="/images/hero/jagxslide2.jpeg" alt="" class="slide" loading="lazy" />
+    <img src="/images/hero/jagxslide3.jpeg" alt="" class="slide" loading="lazy" />
+    <img src="/images/hero/jagxslide4.jpeg" alt="" class="slide" loading="lazy" />
+    <img src="/images/hero/jagxslide5.jpeg" alt="" class="slide" loading="lazy" />
+
+  </div>
+
   <div class="cs-overlay"></div>
+
   <div class="cs-container">
     <div class="cs-flex-group">
       <span class="cs-topper">Veteran. Professional. Reliable.</span>
-      <h1 class="cs-title">
-        Security You Can Trust
-      </h1>
+      <h1 class="cs-title">Security You Can Trust</h1>
       <p class="cs-text">
         At JagX Security & Investigations, we bring over 20 years of federal law enforcement and military experience to every assignment. 
         From armed protection to detailed investigations, we deliver professional, dependable, and discreet services across Michigan.
       </p>
       <a href="/armed-security/" class="cs-button-solid">Explore Services</a>
       <a href="/about/" class="cs-button-transparent">
-        <img
-          class="cs-img"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-          alt="play icon"
-          width="17"
-          height="17"
-        />
+        <img class="cs-img" loading="lazy" decoding="async"
+             src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
+             alt="play icon" width="17" height="17" />
         Learn More
       </a>
     </div>
   </div>
+  <script src="/assets/js/hero.js"></script>
 </section>
+
 
 <!-- ============================================ -->
 <!--                  Services                    -->

@@ -252,6 +252,44 @@
     opacity: .8;
   }
 }
+/* === Slideshow overrides for #hero (append after your old CSS) === */
+#hero .cs-slideshow {           /* wrapper that replaced the <video> */
+  position: absolute;
+  inset: 0;
+  /* inherits width/height/positioning from .cs-picture */
+}
+
+#hero .cs-slideshow .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* same behavior as the old video */
+  opacity: 0;
+  transform: scale(1.03);       /* subtle zoom for depth */
+  transition: opacity 800ms ease-in-out, transform 800ms ease-in-out;
+  will-change: opacity, transform;
+}
+
+/* visible frame */
+#hero .cs-slideshow .slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Neutralize the old video selector if it’s still present */
+#hero .cs-picture video {
+  display: none !important;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #hero .cs-slideshow .slide {
+    transition: none;
+    transform: none;
+  }
+}
+
 /*-- -------------------------- -->
 <---          Services          -->
 <--- -------------------------- -*/
