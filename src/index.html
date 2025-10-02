@@ -244,6 +244,56 @@ eleventyNavigation:
 </section>
 
 <!-- ============================================ -->
+<!--                Contact Us                     -->
+<!-- ============================================ -->
+
+<section id="contact-us">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Get In Touch</span>
+      <h2 class="cs-title">Ready to Secure Your Future?</h2>
+      <p class="cs-text">
+        Whether you need armed security, private investigations, or asset checks, our veteran and law enforcement trained professionals are here to help. 
+        Contact JagX Security & Investigations today for reliable, professional security solutions.
+      </p>
+    </div>
+    
+    <!-- Contact Form -->
+    <form id="cs-form-home" name="Contact Form" method="post" class="cs-form" action="https://submit-form.com/pRZ0QnsXe">
+      <div class="cs-form-row">
+        <label class="cs-label">
+          Name
+          <input class="cs-input" required type="text" id="name-home" name="name" placeholder="John/Jane Doe" />
+        </label>
+        <label class="cs-label">
+          Email
+          <input class="cs-input" required type="email" id="email-home" name="email" placeholder="name@company.com" />
+        </label>
+      </div>
+      <div class="cs-form-row">
+        <label class="cs-label">
+          Phone
+          <input class="cs-input" required type="tel" id="phone-home" name="phone" placeholder="+1 (313) 477-6666" />
+        </label>
+        <label class="cs-label">
+          How Did You Find Us
+          <input class="cs-input" type="text" id="find-home" name="find-us" placeholder="Google, Referral, Social Media..." />
+        </label>
+      </div>
+      <label class="cs-label cs-label-message">
+        Message
+        <textarea class="cs-input cs-textarea" required name="Message" id="message-home" placeholder="Hello, I'm interested in..."></textarea>
+      </label>
+      <button class="cs-button-solid cs-submit" type="submit">
+        Send Message
+      </button>
+    </form>
+
+   
+  </div>
+</section>
+
+<!-- ============================================ -->
 <!--             Final Call to Action             -->
 <!-- ============================================ -->
 
@@ -273,4 +323,41 @@ eleventyNavigation:
       }
     });
   }
+
+  // Contact form handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('cs-form-home');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(form);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const phone = formData.get('phone');
+        const findUs = formData.get('find-us');
+        const message = formData.get('Message');
+        
+        // Basic validation
+        if (!name || !email || !phone || !message) {
+          alert('Please fill in all required fields.');
+          return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+        
+        // Show success message
+        alert('Thank you for your message! We will get back to you soon.');
+        
+        // Reset form
+        form.reset();
+      });
+    }
+  });
 </script>

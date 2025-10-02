@@ -1,0 +1,107 @@
+---
+layout: "base.html"
+description: "Join the JagX Security & Investigations team. We're seeking qualified veterans, former law enforcement,
+and security professionals to provide professional protection and investigative services across Michigan."
+metaTitle: "Careers at JagX Security & Investigations | Join Our Professional Team"
+tagTitle: "Careers"
+preloadImg: "/images/landing.png"
+preloadCSS: "/css/careers.css"
+permalink: "careers/"
+eleventyNavigation:
+  key: Careers
+  order: 500
+---
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+  <h1 id="home-h">Careers</h1>
+  {% image './src/images/landing.png', 'Join the JagX Security & Investigations professional team', '',
+  'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section>
+
+<!-- ============================================ -->
+<!--                Careers Content               -->
+<!-- ============================================ -->
+
+<section id="cs-contact-242">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Careers at JagX</span>
+      <h2 class="cs-title">Apply for Work!</h2>
+      <p class="cs-text">
+        Join our team of highly trained security professionals, veterans, and former law enforcement officers.
+        At JagX Security & Investigations, we're looking for dedicated individuals who share our commitment
+        to providing exceptional protection and investigative services across Michigan.
+      </p>
+      <p class="cs-text">
+        We offer competitive compensation, professional development opportunities, and the chance to work
+        with a respected team that values integrity, professionalism, and excellence.
+      </p>
+
+    </div>
+
+    <!-- Side by Side Section -->
+    <div class="cs-side-by-side">
+      <!-- Download Application Section -->
+      <div class="download-section"
+        style="padding: 2rem; background: var(--primary); border-radius: 8px; text-align: center;">
+        <h3 style="color: white; margin-bottom: 1rem;">Download our Application by clicking the Button below.</h3>
+        <a href="/assets/documents/JagX_Employment_Application.pdf" class="cs-button-solid"
+          download="JagX_Employment_Application.pdf"
+          style="background: white; color: var(--primary); text-decoration: none; padding: 0 1.5rem; border-radius: 4px; display: inline-block; font-weight: bold; line-height: clamp(2.875rem, 5.5vw, 3.5rem);">
+          Download Application
+        </a>
+      </div>
+
+      <!-- Contact Form for Careers -->
+      <form id="cs-form-242" name="Career Application Form" method="post" action="https://submit-form.com/pRZ0QnsXe">
+        <label class="cs-label">
+          Your name
+          <input class="cs-input" required type="text" id="name-242" name="name" placeholder="John/Jane Doe" />
+        </label>
+        <label class="cs-label">
+          Your email
+          <input class="cs-input" required type="email" id="email-242" name="email" placeholder="name@email.com" />
+        </label>
+        <label class="cs-label">
+          Subject
+          <input class="cs-input" type="text" id="subject-242" name="subject"
+            placeholder="e.g., Job Application, Resume Submission, etc." />
+        </label>
+        <label class="cs-label">
+          Upload PDF Document
+          <input class="cs-input" type="file" id="document-242" name="document" accept=".pdf"
+            style="padding: 0.75rem 1.25rem;" />
+        </label>
+        <button class="cs-button-solid cs-submit" type="submit">
+          Submit Application
+        </button>
+      </form>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Final Call to Action             -->
+<!-- ============================================ -->
+
+<section id="cta">
+  <div class="container">
+    <h2 class="title">
+      Ready to Join Our Team?<br />
+      Start Your Career with JagX
+    </h2>
+    <p>
+      Take the next step in your security or investigation career. Join a team of professionals
+      who are committed to excellence, integrity, and protecting what matters most.
+    </p>
+    <a href="#cs-contact-242" class="button-solid">Apply Today</a>
+  </div>
+  {% image './src/images/final_home_img.png', 'JagX Security & Investigations professional team',
+  '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section>
