@@ -229,6 +229,9 @@
     font-size: 1.5rem;
     color: var(--primary);
   }
+  #content-page-1402 h4 {
+    color: var(--primary);
+  }
   #content-page-1402 h4,
   #content-page-1402 h5,
   #content-page-1402 h6 {
@@ -395,10 +398,10 @@
     gap: 0.5rem;
   }
   #content-page-1402 .cs-h3-icon {
-    width: 2rem;
-    height: auto;
+    /* width: 2rem; */
+    /* height: auto; */
     display: block;
-    filter: hue-rotate(198deg);
+    /* filter: hue-rotate(198deg); */
   }
   #content-page-1402 .cs-item-text {
     font-size: 0.875rem;
@@ -875,7 +878,7 @@
   #services-563 .cs-icon {
     /* adds extra space between the icon and top of parent so it's more centered */
     margin-top: clamp(0.125rem, 0.47vw, 0.4375rem);
-    filter: hue-rotate(70deg);
+    /* filter: hue-rotate(70deg); */
   }
   #services-563 .cs-button-solid {
     font-size: 1rem;
@@ -975,7 +978,7 @@
     opacity: 0.8;
   }
   body.dark-mode #services-563 .cs-icon {
-    filter: brightness(150%);
+    /* filter: brightness(150%); */
   }
 }
 
