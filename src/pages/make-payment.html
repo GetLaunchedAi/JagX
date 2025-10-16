@@ -1,0 +1,385 @@
+---
+layout: "base.html"
+description: "Make a secure payment to JagX Security & Investigations using Venmo, Cash App, PayPal, or Zelle. Quick and easy payment options for your invoice."
+metaTitle: "Make a Payment | JagX Security & Investigations"
+tagTitle: "Make a Payment"
+preloadImg: "/images/landing.png"
+preloadCSS: "/css/payment.css"
+permalink: "make-payment/"
+eleventyNavigation:
+  key: Make a Payment
+  order: 700
+---
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+  <h1 id="home-h">Make a Payment</h1>
+  {% image './src/images/landing.png', 'JagX Security & Investigations payment options', '',
+  'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section>
+
+<!-- ============================================ -->
+<!--                Payment Options               -->
+<!-- ============================================ -->
+
+<section id="cs-payment-options">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Secure Payment</span>
+      <h2 class="cs-title">Choose Your Payment Method</h2>
+      <p class="cs-text">
+        Pay your invoice quickly and securely using any of the payment methods below. 
+        Simply scan the QR code with your mobile device or use the provided payment details.
+      </p>
+    </div>
+
+    <!-- Invoice Details -->
+    <div class="cs-invoice-details">
+      <h3 class="cs-invoice-title">Invoice Details</h3>
+      <div class="cs-invoice-info">
+        <div class="cs-invoice-item">
+          <span class="cs-label">Invoice Number:</span>
+          <span class="cs-value">INV-2024-001</span>
+        </div>
+        <div class="cs-invoice-item">
+          <span class="cs-label">Amount Due:</span>
+          <span class="cs-value cs-amount">$500.00</span>
+        </div>
+        <div class="cs-invoice-item">
+          <span class="cs-label">Due Date:</span>
+          <span class="cs-value">December 31, 2024</span>
+        </div>
+        <div class="cs-invoice-item">
+          <span class="cs-label">Service:</span>
+          <span class="cs-value">Security Services</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Options Grid -->
+    <div class="cs-payment-grid">
+      <!-- Venmo -->
+      <div class="cs-payment-card" data-payment-method="venmo" onclick="openPaymentModal('venmo')">
+        <div class="cs-payment-header">
+          <div class="cs-payment-logo">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="#3D95CE">
+              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .63.285.63.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+            </svg>
+          </div>
+          <h3 class="cs-payment-title">Venmo</h3>
+        </div>
+        <div class="cs-qr-container">
+          <div class="cs-qr-code">
+            <!-- Venmo QR Code -->
+            {% image './src/images/payment/venmo.jpeg', 'Venmo QR Code - Scan to pay with Venmo', 'cs-qr-image', 'lazy', '(max-width: 400px) 200px, 250px' %}
+          </div>
+        </div>
+        <div class="cs-payment-instructions">
+          <p class="cs-instruction-text">1. Open Venmo app</p>
+          <p class="cs-instruction-text">2. Tap "Scan"</p>
+          <p class="cs-instruction-text">3. Scan QR code</p>
+          <p class="cs-instruction-text">4. Enter amount: <strong>$500.00</strong></p>
+        </div>
+      </div>
+
+      <!-- Cash App -->
+      <div class="cs-payment-card" data-payment-method="cashapp" onclick="openPaymentModal('cashapp')">
+        <div class="cs-payment-header">
+          <div class="cs-payment-logo">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="#00D632">
+              <path d="M23.59 6.29a1.58 1.58 0 0 0-1.22-.4c-.71.1-1.12.73-1.12 1.45v.66a6.22 6.22 0 0 1-5.77-5.77h-.66a1.59 1.59 0 0 0-1.45-1.12A1.52 1.52 0 0 0 11.76.8a1.54 1.54 0 0 0 .4 1.22 1.58 1.58 0 0 0 1.16.81h.66a4.74 4.74 0 0 0 4.6 4.6v.66a1.59 1.59 0 0 0 1.12 1.45 1.52 1.52 0 0 0 1.22-.4 1.54 1.54 0 0 0 .4-1.16 1.58 1.58 0 0 0-.81-1.22zM17.36 9.7a1.58 1.58 0 0 0-1.22-.4 1.59 1.59 0 0 0-1.45 1.12v.66a6.22 6.22 0 0 1-5.77 5.77h-.66a1.59 1.59 0 0 0-1.45 1.12 1.52 1.52 0 0 0 .4 1.22 1.54 1.54 0 0 0 1.16.4 1.58 1.58 0 0 0 1.22-.4 1.59 1.59 0 0 0 .4-1.16v-.66a4.74 4.74 0 0 0 4.6-4.6v-.66a1.59 1.59 0 0 0 1.12-1.45 1.52 1.52 0 0 0-.4-1.22z"/>
+            </svg>
+          </div>
+          <h3 class="cs-payment-title">Cash App</h3>
+        </div>
+        <div class="cs-cashapp-info">
+          <div class="cs-cashapp-user">
+            <p class="cs-cashapp-name">Mo Kaz</p>
+            <p class="cs-cashapp-tag">$jagxinc</p>
+          </div>
+        </div>
+        <div class="cs-qr-container">
+          <div class="cs-qr-code">
+            <!-- Cash App QR Code -->
+            {% image './src/images/payment/cashapp.jpeg', 'Cash App QR Code - Scan to pay with Cash App', 'cs-qr-image', 'lazy', '(max-width: 400px) 200px, 250px' %}
+          </div>
+        </div>
+        <div class="cs-payment-instructions">
+          <p class="cs-instruction-text">1. Open Cash App</p>
+          <p class="cs-instruction-text">2. Tap "Scan"</p>
+          <p class="cs-instruction-text">3. Scan QR code</p>
+          <p class="cs-instruction-text">4. Enter amount: <strong>$500.00</strong></p>
+        </div>
+      </div>
+
+      <!-- PayPal -->
+      <div class="cs-payment-card" data-payment-method="paypal" onclick="openPaymentModal('paypal')">
+        <div class="cs-payment-header">
+          <div class="cs-payment-logo">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="#0070BA">
+              <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.105-.726c-1.016-5.09-4.349-6.797-8.647-6.797H5.998c-.524 0-.968.382-1.05.9L2.47 20.597h4.606l1.12-7.106c.082-.518.526-.9 1.05-.9h2.19c4.298 0 7.631-1.707 8.647-6.797.03-.149.054-.294.077-.437.292-1.867-.002-3.137-1.012-4.287z"/>
+            </svg>
+          </div>
+          <h3 class="cs-payment-title">PayPal</h3>
+        </div>
+        <div class="cs-paypal-info">
+          <p class="cs-paypal-business">JagX Security & Investigations</p>
+        </div>
+        <div class="cs-qr-container">
+          <div class="cs-qr-code">
+            <!-- PayPal QR Code -->
+            {% image './src/images/payment/paypal.jpeg', 'PayPal QR Code - Scan to pay with PayPal', 'cs-qr-image', 'lazy', '(max-width: 400px) 200px, 250px' %}
+          </div>
+        </div>
+        <div class="cs-payment-instructions">
+          <p class="cs-instruction-text">1. Open PayPal app</p>
+          <p class="cs-instruction-text">2. Tap "Send"</p>
+          <p class="cs-instruction-text">3. Scan QR code</p>
+          <p class="cs-instruction-text">4. Enter amount: <strong>$500.00</strong></p>
+        </div>
+      </div>
+
+      <!-- Zelle -->
+      <div class="cs-payment-card" data-payment-method="zelle" onclick="openPaymentModal('zelle')">
+        <div class="cs-payment-header">
+          <div class="cs-payment-logo">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="#6C1EB6">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16c-.169 0-.338.042-.49.126l-1.68 1.01c-.338.203-.76.203-1.098 0l-1.68-1.01c-.152-.084-.321-.126-.49-.126-.338 0-.676.169-.845.507l-2.03 4.06c-.169.338-.169.76 0 1.098.169.338.507.507.845.507.169 0 .338-.042.49-.126l1.68-1.01c.338-.203.76-.203 1.098 0l1.68 1.01c.152.084.321.126.49.126.338 0 .676-.169.845-.507l2.03-4.06c.169-.338.169-.76 0-1.098-.169-.338-.507-.507-.845-.507z"/>
+            </svg>
+          </div>
+          <h3 class="cs-payment-title">Zelle</h3>
+        </div>
+        <div class="cs-zelle-info">
+          <p class="cs-zelle-name">MOHAMAD KAZAN</p>
+        </div>
+        <div class="cs-qr-container">
+          <div class="cs-qr-code">
+            <!-- Zelle QR Code -->
+            {% image './src/images/payment/zelle.jpeg', 'Zelle QR Code - Scan to pay with Zelle', 'cs-qr-image', 'lazy', '(max-width: 400px) 200px, 250px' %}
+          </div>
+        </div>
+        <div class="cs-payment-instructions">
+          <p class="cs-instruction-text">1. Open your bank app</p>
+          <p class="cs-instruction-text">2. Find Zelle option</p>
+          <p class="cs-instruction-text">3. Scan QR code</p>
+          <p class="cs-instruction-text">4. Enter amount: <strong>$500.00</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Instructions -->
+    <div class="cs-payment-help">
+      <h3 class="cs-help-title">Need Help?</h3>
+      <p class="cs-help-text">
+        If you have any questions about making a payment or need assistance, 
+        please contact us at <a href="tel:3134776666">(313) 477-6666</a> or 
+        <a href="mailto:jagxinc@yahoo.com">jagxinc@yahoo.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Payment Modal                 -->
+<!-- ============================================ -->
+
+<div id="payment-modal" class="cs-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+  <div class="cs-modal-overlay" id="modal-overlay" onclick="window.closePaymentModal()"></div>
+  <div class="cs-modal-content" onclick="event.stopPropagation()">
+    <button class="cs-modal-close" id="modal-close" aria-label="Close payment modal" onclick="console.log('Button clicked'); window.closePaymentModal();" type="button">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    
+    <div class="cs-modal-header">
+      <div class="cs-modal-logo" id="modal-logo"></div>
+      <h2 class="cs-modal-title" id="modal-title">Payment Method</h2>
+    </div>
+    
+    <div class="cs-modal-body">
+      <div class="cs-modal-qr-container">
+        <div class="cs-modal-qr-code" id="modal-qr-code">
+          <!-- QR code will be inserted here -->
+        </div>
+      </div>
+      
+      <div class="cs-modal-payment-info" id="modal-payment-info">
+        <!-- Payment details will be inserted here -->
+      </div>
+      
+      <div class="cs-modal-instructions" id="modal-instructions">
+        <!-- Instructions will be inserted here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Payment method data
+const paymentMethods = {
+  venmo: {
+    name: 'Venmo',
+    logo: `<svg width="60" height="60" viewBox="0 0 24 24" fill="#3D95CE">
+      <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .63.285.63.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+    </svg>`,
+    qrImage: '/images/venmo-1179w.jpeg',
+    instructions: [
+      '1. Open Venmo app on your phone',
+      '2. Tap the "Scan" button',
+      '3. Point your camera at the QR code',
+      '4. Enter amount: $500.00',
+      '5. Add a note (optional)',
+      '6. Tap "Pay" to complete'
+    ]
+  },
+  cashapp: {
+    name: 'Cash App',
+    logo: `<svg width="60" height="60" viewBox="0 0 24 24" fill="#00D632">
+      <path d="M23.59 6.29a1.58 1.58 0 0 0-1.22-.4c-.71.1-1.12.73-1.12 1.45v.66a6.22 6.22 0 0 1-5.77-5.77h-.66a1.59 1.59 0 0 0-1.45-1.12A1.52 1.52 0 0 0 11.76.8a1.54 1.54 0 0 0 .4 1.22 1.58 1.58 0 0 0 1.16.81h.66a4.74 4.74 0 0 0 4.6 4.6v.66a1.59 1.59 0 0 0 1.12 1.45 1.52 1.52 0 0 0 1.22-.4 1.54 1.54 0 0 0 .4-1.16 1.58 1.58 0 0 0-.81-1.22zM17.36 9.7a1.58 1.58 0 0 0-1.22-.4 1.59 1.59 0 0 0-1.45 1.12v.66a6.22 6.22 0 0 1-5.77 5.77h-.66a1.59 1.59 0 0 0-1.45 1.12 1.52 1.52 0 0 0 .4 1.22 1.54 1.54 0 0 0 1.16.4 1.58 1.58 0 0 0 1.22-.4 1.59 1.59 0 0 0 .4-1.16v-.66a4.74 4.74 0 0 0 4.6-4.6v-.66a1.59 1.59 0 0 0 1.12-1.45 1.52 1.52 0 0 0-.4-1.22z"/>
+    </svg>`,
+    qrImage: '/images/cashapp-1179w.jpeg',
+    userInfo: 'Mo Kaz ($jagxinc)',
+    instructions: [
+      '1. Open Cash App on your phone',
+      '2. Tap the "Scan" button',
+      '3. Point your camera at the QR code',
+      '4. Enter amount: $500.00',
+      '5. Add a note (optional)',
+      '6. Tap "Pay" to complete'
+    ]
+  },
+  paypal: {
+    name: 'PayPal',
+    logo: `<svg width="60" height="60" viewBox="0 0 24 24" fill="#0070BA">
+      <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.105-.726c-1.016-5.09-4.349-6.797-8.647-6.797H5.998c-.524 0-.968.382-1.05.9L2.47 20.597h4.606l1.12-7.106c.082-.518.526-.9 1.05-.9h2.19c4.298 0 7.631-1.707 8.647-6.797.03-.149.054-.294.077-.437.292-1.867-.002-3.137-1.012-4.287z"/>
+    </svg>`,
+    qrImage: '/images/paypal-850w.jpeg',
+    userInfo: 'JagX Security & Investigations',
+    instructions: [
+      '1. Open PayPal app on your phone',
+      '2. Tap "Send" at the bottom',
+      '3. Tap "Scan QR code"',
+      '4. Point your camera at the QR code',
+      '5. Enter amount: $500.00',
+      '6. Tap "Send" to complete'
+    ]
+  },
+  zelle: {
+    name: 'Zelle',
+    logo: `<svg width="60" height="60" viewBox="0 0 24 24" fill="#6C1EB6">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16c-.169 0-.338.042-.49.126l-1.68 1.01c-.338.203-.76.203-1.098 0l-1.68-1.01c-.152-.084-.321-.126-.49-.126-.338 0-.676.169-.845.507l-2.03 4.06c-.169.338-.169.76 0 1.098.169.338.507.507.845.507.169 0 .338-.042.49-.126l1.68-1.01c.338-.203.76-.203 1.098 0l1.68 1.01c.152.084.321.126.49.126.338 0 .676-.169.845-.507l2.03-4.06c.169-.338.169-.76 0-1.098-.169-.338-.507-.507-.845-.507z"/>
+    </svg>`,
+    qrImage: '/images/zelle-1179w.jpeg',
+    userInfo: 'MOHAMAD KAZAN',
+    instructions: [
+      '1. Open your bank app on your phone',
+      '2. Look for "Zelle" or "Send Money"',
+      '3. Tap "Scan QR code" or camera icon',
+      '4. Point your camera at the QR code',
+      '5. Enter amount: $500.00',
+      '6. Tap "Send" to complete'
+    ]
+  }
+};
+
+// Global modal functions
+window.openPaymentModal = function(method) {
+  const modal = document.getElementById('payment-modal');
+  const methodData = paymentMethods[method];
+  
+  if (!methodData) return;
+  
+  // Update modal content
+  document.getElementById('modal-logo').innerHTML = methodData.logo;
+  document.getElementById('modal-title').textContent = methodData.name;
+  
+  // Update QR code
+  const qrContainer = document.getElementById('modal-qr-code');
+  qrContainer.innerHTML = `<img src="${methodData.qrImage}" alt="${methodData.name} QR Code" class="cs-modal-qr-image" />`;
+  
+  // Update payment info
+  const paymentInfo = document.getElementById('modal-payment-info');
+  if (methodData.userInfo) {
+    paymentInfo.innerHTML = `
+      <div class="cs-modal-user-info">
+        <p class="cs-modal-user-name">${methodData.userInfo}</p>
+        <p class="cs-modal-amount">Amount: <strong>$500.00</strong></p>
+      </div>
+    `;
+  } else {
+    paymentInfo.innerHTML = `
+      <div class="cs-modal-user-info">
+        <p class="cs-modal-amount">Amount: <strong>$500.00</strong></p>
+      </div>
+    `;
+  }
+  
+  // Update instructions
+  const instructions = document.getElementById('modal-instructions');
+  instructions.innerHTML = `
+    <h3 class="cs-modal-instructions-title">How to Pay:</h3>
+    <ol class="cs-modal-instructions-list">
+      ${methodData.instructions.map(instruction => `<li>${instruction}</li>`).join('')}
+    </ol>
+  `;
+  
+  // Show modal
+  modal.setAttribute('aria-hidden', 'false');
+  modal.classList.add('cs-modal-open');
+  document.body.classList.add('cs-modal-open');
+  
+  // Focus management
+  const closeButton = document.getElementById('modal-close');
+  closeButton.focus();
+};
+
+window.closePaymentModal = function() {
+  console.log('closePaymentModal called'); // Debug log
+  try {
+    const modal = document.getElementById('payment-modal');
+    if (modal) {
+      modal.setAttribute('aria-hidden', 'true');
+      modal.classList.remove('cs-modal-open');
+      document.body.classList.remove('cs-modal-open');
+      document.body.style.overflow = '';
+      console.log('Modal closed successfully'); // Debug log
+    } else {
+      console.error('Modal element not found');
+    }
+  } catch (error) {
+    console.error('Error closing modal:', error);
+  }
+};
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('payment-modal');
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal && modal.classList.contains('cs-modal-open')) {
+      console.log('Escape key pressed'); // Debug log
+      window.closePaymentModal();
+    }
+  });
+  
+  // Prevent body scroll when modal is open
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        if (document.body.classList.contains('cs-modal-open')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+    });
+  });
+  
+  observer.observe(document.body, { attributes: true });
+});
+</script>
