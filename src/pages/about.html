@@ -16,8 +16,8 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="int-hero">
-  <h1 id="home-h">About Us</h1>
-  {% image './src/images/landing.png', 'JagX Security & Investigations team at work', '', 'lazy',
+  <h1 id="home-h" class="fx fade-in">About Us</h1>
+  {% image './src/images/landing.png', 'JagX Security & Investigations team at work', 'fx fade-in', 'lazy',
   '(max-width: 850px) 850px, 1920px'%}
 </section>
 
@@ -30,10 +30,10 @@ eleventyNavigation:
     <!-- Left Image Section -->
     <div class="cs-left">
       {% image './src/images/about_img_0.webp', 'professional security team on duty',
-      'cs-picture cs-picture1', 'lazy'%}
+      'cs-picture cs-picture1 fx slide-top staggered-m', 'lazy'%}
     </div>
     <!-- Right Content Section-->
-    <div class="cs-right">
+    <div class="cs-right fx slide-top staggered-m" style="--i:2">
       <span class="cs-topper">About Us</span>
       <h2 class="cs-title">About JagX Security & Investigations</h2>
       <p class="cs-text">
@@ -69,13 +69,13 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="faq-326">
-  <div class="cs-container">
-    <div class="cs-content">
+  <div class="cs-container fx fade-in">
+    <div class="cs-content fx slide-top staggered-m" style="--i:1">
       <span class="cs-topper">FAQs</span>
       <h2 class="cs-title">Frequently Asked Questions</h2>
     </div>
     <div class="cs-flex-group">
-      <ul class="cs-faq-group">
+      <ul class="cs-faq-group fx slide-top staggered-m" style="--i:2">
         <li class="cs-faq-item active">
           <button class="cs-button">
             <span class="cs-button-text">
@@ -152,7 +152,7 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="cta">
-  <div class="container">
+  <div class="container fx fade-in">
     <h2 class="title">
       Protect What Matters Most <br />
       With JagX Security
