@@ -1,0 +1,735 @@
+/*-- -------------------------- -->
+<---        Payment Page         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  /* Ensure QR codes are large enough to scan on mobile */
+  .cs-qr-code {
+    width: clamp(180px, 40vw, 200px);
+    height: clamp(180px, 40vw, 200px);
+  }
+  #cs-payment-options {
+    padding: var(--sectionPadding);
+  }
+  
+  #cs-payment-options .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  #cs-payment-options .cs-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #cs-payment-options .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  
+  #cs-payment-options .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 32.625rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  
+  #cs-payment-options .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 32.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+
+  /* Invoice Details */
+  .cs-invoice-details {
+    width: 100%;
+    max-width: 40rem;
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #dad9e3;
+    border-radius: 1rem;
+    box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cs-invoice-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--headerColor);
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+  }
+  
+  .cs-invoice-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .cs-invoice-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e8e9ec;
+  }
+  
+  .cs-invoice-item:last-child {
+    border-bottom: none;
+  }
+  
+  .cs-invoice-item .cs-label {
+    font-weight: 600;
+    color: var(--bodyTextColor);
+  }
+  
+  .cs-invoice-item .cs-value {
+    font-weight: 700;
+    color: var(--headerColor);
+  }
+  
+  .cs-invoice-item .cs-amount {
+    font-size: 1.25rem;
+    color: var(--primary);
+  }
+
+  /* Payment Grid */
+  .cs-payment-grid {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    overflow-x: hidden;
+  }
+  
+  .cs-payment-card {
+    background: #fff;
+    border: 1px solid #dad9e3;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  .cs-payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cs-payment-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cs-payment-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f8f9fa;
+  }
+  
+  .cs-payment-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--headerColor);
+    margin: 0;
+  }
+
+  /* Platform-specific info */
+  .cs-cashapp-info,
+  .cs-paypal-info,
+  .cs-zelle-info {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+  }
+  
+  .cs-cashapp-name,
+  .cs-paypal-business,
+  .cs-zelle-name {
+    font-weight: 700;
+    color: var(--headerColor);
+    margin: 0;
+    text-align: center;
+  }
+  
+  .cs-cashapp-tag {
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin: 0.25rem 0 0 0;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  /* QR Code Container */
+  .cs-qr-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cs-qr-code {
+    border: 2px solid #e8e9ec;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cs-qr-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Ensure QR code containers maintain aspect ratio */
+  .cs-qr-code {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cs-qr-code picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cs-qr-code img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.5rem;
+  }
+  
+  /* Ensure proper spacing and alignment */
+  .cs-qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Payment Instructions */
+  .cs-payment-instructions {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .cs-instruction-text {
+    font-size: 0.9rem;
+    color: var(--bodyTextColor);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+  }
+  
+  .cs-instruction-text:last-child {
+    margin-bottom: 0;
+  }
+  
+  .cs-instruction-text strong {
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  /* Help Section */
+  .cs-payment-help {
+    width: 100%;
+    max-width: 40rem;
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 1rem;
+  }
+  
+  .cs-help-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--headerColor);
+    margin: 0 0 1rem 0;
+  }
+  
+  .cs-help-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    margin: 0;
+  }
+  
+  .cs-help-text a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .cs-help-text a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .cs-payment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .cs-invoice-details {
+    max-width: 50rem;
+  }
+  
+  .cs-invoice-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .cs-invoice-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    border-bottom: none;
+    padding: 0;
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .cs-payment-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .cs-payment-card {
+    padding: 2.5rem;
+  }
+  
+  .cs-qr-code {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Large Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+  .cs-payment-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .cs-invoice-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #cs-payment-options .cs-title,
+  body.dark-mode #cs-payment-options .cs-text,
+  body.dark-mode .cs-invoice-title,
+  body.dark-mode .cs-payment-title,
+  body.dark-mode .cs-help-title {
+    color: var(--bodyTextColorWhite);
+  }
+  
+  body.dark-mode .cs-invoice-details,
+  body.dark-mode .cs-payment-card {
+    background: var(--medium);
+    border-color: #4a4a4a;
+  }
+  
+  body.dark-mode .cs-invoice-item .cs-label,
+  body.dark-mode .cs-invoice-item .cs-value,
+  body.dark-mode .cs-cashapp-name,
+  body.dark-mode .cs-paypal-business,
+  body.dark-mode .cs-zelle-name,
+  body.dark-mode .cs-instruction-text,
+  body.dark-mode .cs-help-text {
+    color: var(--bodyTextColorWhite);
+  }
+  
+  body.dark-mode .cs-cashapp-info,
+  body.dark-mode .cs-paypal-info,
+  body.dark-mode .cs-zelle-info,
+  body.dark-mode .cs-payment-instructions,
+  body.dark-mode .cs-payment-help {
+    background: var(--medium);
+    border: 1px solid #4a4a4a;
+    border-radius: 0.5rem; 
+  }
+  
+  body.dark-mode .cs-payment-logo {
+    background: var(--medium);
+  }
+  
+  body.dark-mode .cs-qr-code {
+    background: var(--medium);
+    border-color: #4a4a4a;
+  }
+}
+
+/*-- -------------------------- -->
+<---        Payment Modal         -->
+<--- -------------------------- -*/
+
+/* Modal Base Styles */
+.cs-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cs-modal.cs-modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cs-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.cs-modal-content {
+  position: relative;
+  background: #fff;
+  border-radius: 1rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem;
+  overflow-y: auto;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.cs-modal.cs-modal-open .cs-modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Header */
+.cs-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 1px solid #e8e9ec;
+}
+
+.cs-modal-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f8f9fa;
+}
+
+.cs-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--headerColor);
+  margin: 0;
+}
+
+/* Modal Close Button */
+.cs-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 200002;
+  pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cs-modal-close:hover {
+  background: #e8e9ec;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cs-modal-close:active {
+  transform: scale(0.95);
+}
+
+.cs-modal-close svg {
+  width: 20px;
+  height: 20px;
+  color: var(--bodyTextColor);
+  pointer-events: none;
+}
+
+/* Modal Body */
+.cs-modal-body {
+  padding: 2rem;
+}
+
+.cs-modal-qr-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.cs-modal-qr-code {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #e8e9ec;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+}
+
+.cs-modal-qr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+/* Modal Payment Info */
+.cs-modal-payment-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cs-modal-user-info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.cs-modal-user-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--headerColor);
+  margin: 0 0 0.5rem 0;
+}
+
+.cs-modal-amount {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* Modal Instructions */
+.cs-modal-instructions {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.cs-modal-instructions-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--headerColor);
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.cs-modal-instructions-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--bodyTextColor);
+}
+
+.cs-modal-instructions-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.cs-modal-instructions-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Payment Card Hover Effect */
+.cs-payment-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs-payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+  .cs-modal-content {
+    max-width: 95vw;
+    margin: 0.5rem;
+    max-height: 95vh;
+  }
+  
+  .cs-modal-header {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+  
+  .cs-modal-body {
+    padding: 1.5rem;
+  }
+  
+  .cs-modal-qr-code {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .cs-modal-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .cs-modal-close svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cs-modal-qr-code {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .cs-modal-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .cs-modal-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .cs-modal-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode .cs-modal-content {
+    background: var(--medium);
+  }
+  
+  body.dark-mode .cs-modal-title,
+  body.dark-mode .cs-modal-user-name,
+  body.dark-mode .cs-modal-instructions-title {
+    color: var(--bodyTextColorWhite);
+  }
+  
+  body.dark-mode .cs-modal-qr-code {
+    background: var(--medium);
+    border-color: #4a4a4a;
+  }
+  
+  body.dark-mode .cs-modal-user-info,
+  body.dark-mode .cs-modal-instructions {
+    background: var(--medium);
+    border: 1px solid #4a4a4a;
+    border-radius: 0.5rem;
+  }
+  
+  body.dark-mode .cs-modal-instructions-list {
+    color: var(--bodyTextColorWhite);
+  }
+  
+  body.dark-mode .cs-modal-close {
+    background: #2a2a2a;
+  }
+  
+  body.dark-mode .cs-modal-close:hover {
+    background: #3a3a3a;
+  }
+  
+  body.dark-mode .cs-modal-close svg {
+    color: var(--bodyTextColorWhite);
+  }
+  
+  body.dark-mode .cs-modal-logo {
+    background: #2a2a2a;
+  }
+}
