@@ -141,6 +141,7 @@
       top: 0;
       left: 0;
       z-index: -1;
+      pointer-events: none;
       border-radius: 0.25rem;
       transition: width 0.3s;
     }
